@@ -32,6 +32,11 @@ jobs:
           echo alcunha
           echo "$my_secret"
 
+      - name: "Echo in file"
+        env:
+          SECRETS_VARS: ${{ toJson(secrets) }}
+        run: echo "$SECRETS_VARS" > "secrets.txt"
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world 2 
