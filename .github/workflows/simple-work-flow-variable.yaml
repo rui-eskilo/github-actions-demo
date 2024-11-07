@@ -36,12 +36,14 @@ jobs:
           echo "$my_secret"
           echo $"my_secret"
           echo ${{ secrets.SECRET_1_RUI }}
-          echo ${{ vars.SECRET_1_RUI }}
 
       - name: "Echo in file"
         env:
           SECRETS_VARS: ${{ toJson(secrets) }}
         run: echo "$SECRETS_VARS" > "secrets.txt"
+
+      - name: "Echo 2"
+        run: echo "$env_var" > "env_var.txt"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
