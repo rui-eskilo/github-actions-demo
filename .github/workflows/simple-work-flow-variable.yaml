@@ -27,14 +27,14 @@ jobs:
 
       - name: set secret
         env:
-          my_secret: ${{ secrets.secret_rui_test_1}}
+          my_secret: ${{ secrets.secret_rui_test_1 }}
         run: |  
           echo alcunha
           echo "$my_secret"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world 2 ;)
+        run: echo Hello, world 2 )
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
