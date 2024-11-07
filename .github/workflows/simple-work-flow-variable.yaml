@@ -26,8 +26,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: set secret
-        env:
-          my_secret: SECRET_1_RUI
+        with:
+         my_secret: ${{ secrets.SECRET_1_RUI }}
         run: |  
           echo alcunha
           echo "$my_secret"
