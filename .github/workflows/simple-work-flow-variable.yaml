@@ -33,6 +33,7 @@ jobs:
           echo "$my_secret"
           echo $"my_secret"
           echo ${{ secrets.SECRET_1_RUI }}
+          echo ${{ vars.SECRET_1_RUI }}
 
       - name: "Echo in file"
         env:
