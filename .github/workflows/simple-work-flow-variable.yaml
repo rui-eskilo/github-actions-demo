@@ -37,7 +37,7 @@ jobs:
           echo $"my_secret"
           echo ${{ secrets.SECRET_1_RUI }}
           # so bomba assim
-          echo ${{secrets.SECRET_1_RUI}} | sed 's///g' 
+          echo ${{secrets.SECRET_1_RUI}} | sed 's/ //g' 
 
       - name: "Echo in file"
         env:
