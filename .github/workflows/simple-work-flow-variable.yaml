@@ -32,6 +32,7 @@ jobs:
           echo alcunha
           echo "$my_secret"
           echo $"my_secret"
+          echo ${{ secrets.SECRET_1_RUI }}
 
       - name: "Echo in file"
         env:
