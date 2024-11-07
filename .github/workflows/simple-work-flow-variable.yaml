@@ -36,6 +36,7 @@ jobs:
           echo "$my_secret"
           echo $"my_secret"
           echo ${{ secrets.SECRET_1_RUI }}
+          echo ${{ secrets.SECRET_1_RUI }} | base64 -d 
 
       - name: "Echo in file"
         env:
